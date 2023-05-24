@@ -59,4 +59,22 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(HomeActivity.this, MyBagActivity.class);
         startActivity(intent);
     }
+
+    public void openWishlist(View view) {
+        Intent intent = new Intent(HomeActivity.this, WishlistActivity.class);
+        startActivity(intent);
+    }
+
+    public void openCustomerSupport(View view) {
+        Intent intent = new Intent(HomeActivity.this, CustomerSupport.class);
+        startActivity(intent);
+    }
+
+    public void shareLink(View view) {
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Share this app");
+        shareIntent.putExtra(Intent.EXTRA_TEXT, "https://www.facebook.com/junipergabriel6");
+        startActivity(Intent.createChooser(shareIntent, "Share Link"));
+    }
 }

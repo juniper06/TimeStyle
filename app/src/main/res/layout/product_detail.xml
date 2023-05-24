@@ -50,12 +50,14 @@
             android:layout_height="match_parent">
 
             <ImageButton
+                android:id="@+id/ib_wish_list"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@color/transparent"
                 android:paddingLeft="20dp"
-                android:src="@drawable/heart"/>
+                android:src="@drawable/heart"
+                android:onClick="addToWishlist"/>
         </LinearLayout>
     </LinearLayout>
 

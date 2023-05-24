@@ -27,6 +27,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="goBack"
                 android:src="@drawable/back" />
         </LinearLayout>
 
@@ -46,25 +47,17 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right|center"
-                android:background="@color/transparent"
-                android:src="@drawable/shoppingcart" />
-        </LinearLayout>
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_check_out"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/product_item_rv"
@@ -72,34 +65,39 @@
             android:layout_height="match_parent"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="2"
-            tools:listitem="@layout/product_item"/>
+            tools:listitem="@layout/product_item" />
 
     </LinearLayout>
 
-
-
+    <Button
+        android:id="@+id/btn_check_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/mybutton"
+        android:onClick="checkOut"
+        android:text="Check out"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout" />
 
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/rectanglebg"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/transparent"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:src="@drawable/headset" />
+            android:src="@drawable/headset"
+            android:onClick="openCustomerSupport"/>
 
         <Space
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -107,12 +105,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/transparent"
-            android:paddingLeft="30dp"
-            android:paddingTop="10dp"
-            android:src="@drawable/heart" />
+            android:onClick="openWishlist"
+            android:src="@drawable/heart_filled" />
 
         <Space
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -120,12 +117,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/transparent"
-            android:paddingLeft="30dp"
-            android:paddingTop="10dp"
             android:src="@drawable/camera" />
 
         <Space
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -133,23 +128,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/transparent"
-            android:paddingLeft="30dp"
-            android:paddingTop="10dp"
-            android:src="@drawable/doorbell" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/transparent"
-            android:paddingLeft="30dp"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:src="@drawable/share" />
+            android:src="@drawable/share"
+            android:onClick="shareLink" />
     </LinearLayout>
 
 

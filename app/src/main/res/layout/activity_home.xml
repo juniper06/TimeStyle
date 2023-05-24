@@ -27,7 +27,8 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
         android:background="@drawable/rectanglebg"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent">
@@ -36,12 +37,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/transparent"
-            android:paddingLeft="20dp"
-            android:paddingTop="10dp"
-            android:src="@drawable/headset" />
+            android:src="@drawable/headset"
+            android:onClick="openCustomerSupport"/>
 
         <Space
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -49,12 +49,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/transparent"
-            android:paddingLeft="30dp"
-            android:paddingTop="10dp"
-            android:src="@drawable/heart" />
+            android:src="@drawable/heart_filled"
+            android:onClick="openWishlist"/>
 
         <Space
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -62,12 +61,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/transparent"
-            android:paddingLeft="30dp"
-            android:paddingTop="10dp"
             android:src="@drawable/camera" />
 
         <Space
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
@@ -75,23 +72,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/transparent"
-            android:paddingLeft="30dp"
-            android:paddingTop="10dp"
-            android:src="@drawable/doorbell" />
-
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/transparent"
-            android:paddingLeft="30dp"
-            android:paddingTop="10dp"
-            android:paddingRight="20dp"
-            android:src="@drawable/share" />
+            android:src="@drawable/share"
+            android:onClick="shareLink"/>
     </LinearLayout>
 
     <ImageButton

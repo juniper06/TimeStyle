@@ -356,7 +356,7 @@
             android:background="@color/transparent"
             android:paddingLeft="30dp"
             android:paddingTop="10dp"
-            android:src="@drawable/heart" />
+            android:src="@drawable/heart_filled" />
 
         <Space
             android:layout_width="wrap_content"
