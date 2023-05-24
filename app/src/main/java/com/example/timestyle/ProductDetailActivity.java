@@ -3,14 +3,18 @@ package com.example.timestyle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.timestyle.database.AppDatabase;
+import com.example.timestyle.database.dao.BagDao;
 import com.example.timestyle.database.dao.ProductDao;
+import com.example.timestyle.database.entity.Bag;
 import com.example.timestyle.database.entity.Product;
 
 public class ProductDetailActivity extends AppCompatActivity {
@@ -74,5 +78,14 @@ public class ProductDetailActivity extends AppCompatActivity {
 
     public void goBack(View view) {
         onBackPressed();
+    }
+
+    public void addToBag(View view) {
+        SharedPreferences userPrefs = getSharedPreferences("userPrefs", MODE_PRIVATE);
+        long user_id = userPrefs.getLong("user_id", 0);
+        Bag bag = new Bag(user_id, product_id, productQuantity);
+        BagDao bagDao = AppDatabase.getInstance(this).bagDao();
+        bagDao.insert(bag);
+        Toast.makeText(ProductDetailActivity.this, "Successfully Added to bag", Toast.LENGTH_LONG).show();
     }
 }

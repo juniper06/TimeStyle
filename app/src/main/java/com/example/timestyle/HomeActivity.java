@@ -3,9 +3,11 @@ package com.example.timestyle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.timestyle.adapter.ProductAdapter;
 import com.example.timestyle.database.AppDatabase;
@@ -53,4 +55,8 @@ public class HomeActivity extends AppCompatActivity {
         productDao.insert(new Product(pic2ByteArray, "Clothes", "This is a wonderful cloth", 4000));
     }
 
+    public void openBag(View view) {
+        Intent intent = new Intent(HomeActivity.this, MyBagActivity.class);
+        startActivity(intent);
+    }
 }

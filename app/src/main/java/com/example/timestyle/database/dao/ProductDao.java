@@ -23,4 +23,6 @@ public interface ProductDao {
 
     @Query("SELECT * FROM Product WHERE id = :id")
     Product getProductById(long id);
+
+
 }
