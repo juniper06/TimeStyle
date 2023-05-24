@@ -20,12 +20,12 @@
         app:srcCompat="@drawable/header" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/et_email1"
         android:layout_width="306dp"
         android:layout_height="55dp"
         android:background="@drawable/my_border"
         android:ems="10"
-        android:hint="Enter username"
+        android:hint="Enter email address"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.359" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/et_password1"
         android:layout_width="308dp"
         android:layout_height="58dp"
         android:background="@drawable/my_border"
@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2"
+        app:layout_constraintTop_toBottomOf="@+id/et_email1"
         app:layout_constraintVertical_bias="0.108" />
 
     <Button
@@ -64,7 +64,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/et_password1"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
@@ -143,7 +143,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/et_password1"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
@@ -152,11 +152,11 @@
         android:layout_height="18dp"
         android:layout_marginTop="17dp"
         android:layout_marginBottom="23dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPassword"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/et_password1"
+        app:layout_constraintEnd_toEndOf="@+id/et_password1"
         app:layout_constraintHorizontal_bias="0.958"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintStart_toStartOf="@+id/et_password1"
+        app:layout_constraintTop_toTopOf="@+id/et_password1"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/eye" />
 
@@ -166,11 +166,11 @@
         android:layout_height="18dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="21dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextText2"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText2"
+        app:layout_constraintBottom_toBottomOf="@+id/et_email1"
+        app:layout_constraintEnd_toEndOf="@+id/et_email1"
         app:layout_constraintHorizontal_bias="0.961"
-        app:layout_constraintStart_toStartOf="@+id/editTextText2"
-        app:layout_constraintTop_toTopOf="@+id/editTextText2"
+        app:layout_constraintStart_toStartOf="@+id/et_email1"
+        app:layout_constraintTop_toTopOf="@+id/et_email1"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/human" />
 

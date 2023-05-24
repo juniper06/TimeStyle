@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#232323"
-    tools:context=".Product_Detail">
+    tools:context=".ProductDetailActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -23,6 +23,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:onClick="goBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -67,6 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <ImageView
+            android:id="@+id/iv_image_detail"
             android:layout_width="match_parent"
             android:layout_height="224dp"
             android:scaleType="fitCenter"
@@ -97,6 +99,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/tv_name_detail"
                     android:layout_width="180dp"
                     android:layout_height="match_parent"
                     android:text="IWC Watch"
@@ -132,6 +135,8 @@
             android:paddingRight="15dp">
 
             <TextView
+
+                android:id="@+id/tv_description_detail"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
@@ -144,39 +149,7 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:orientation="horizontal">
-            <LinearLayout
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/imagebox"/>
-            <Space
-                android:layout_width="15dp"
-                android:layout_height="match_parent">
-            </Space>
-            <LinearLayout
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/imagebox"/>
-            <Space
-                android:layout_width="15dp"
-                android:layout_height="match_parent">
-            </Space>
-            <LinearLayout
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/imagebox"/>
-            <Space
-                android:layout_width="15dp"
-                android:layout_height="match_parent">
-            </Space>
 
-            <LinearLayout
-                android:layout_width="80dp"
-                android:layout_height="match_parent"
-                android:background="@drawable/imagebox"/>
-            <Space
-                android:layout_width="15dp"
-                android:layout_height="match_parent">
-            </Space>
         </LinearLayout>
         <LinearLayout
             android:paddingTop="5dp"
@@ -200,6 +173,7 @@
                 android:background="@drawable/boxprice">
 
                 <TextView
+                    android:id="@+id/tv_price_detail"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
@@ -220,16 +194,19 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
                     <ImageButton
+                        android:onClick="decrementQuantity"
                         android:background="@color/transparent"
                         android:src="@drawable/minus"
                         android:layout_width="45dp"
                         android:layout_height="match_parent"/>
                     <TextView
+                        android:id="@+id/tv_quantity_detail"
                         android:gravity="left|center"
                         android:layout_width="20dp"
                         android:layout_height="match_parent"
                         android:text="1"/>
                     <ImageButton
+                        android:onClick="incrementQuantity"
                         android:paddingRight="10dp"
                         android:background="@color/transparent"
                         android:layout_width="match_parent"

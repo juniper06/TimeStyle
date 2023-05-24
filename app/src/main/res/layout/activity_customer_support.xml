@@ -58,7 +58,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/et_firstname"
         android:layout_width="297dp"
         android:layout_height="53dp"
         android:background="@drawable/my_border"
@@ -72,7 +72,7 @@
         app:layout_constraintVertical_bias="0.255" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/et_firstname"
         android:layout_width="297dp"
         android:layout_height="53dp"
         android:background="@drawable/my_border"
@@ -114,7 +114,7 @@
         app:layout_constraintVertical_bias="0.875" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/et_firstname"
         android:layout_width="297dp"
         android:layout_height="53dp"
         android:background="@drawable/my_border"
@@ -147,7 +147,7 @@
         android:text="Last name"
         android:textColor="#FFEDA3"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText"
+        app:layout_constraintBottom_toTopOf="@+id/et_firstname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent" />
@@ -163,7 +163,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.156"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextText" />
+        app:layout_constraintTop_toTopOf="@+id/et_firstname" />
 
     <TextView
         android:id="@+id/textView21"
